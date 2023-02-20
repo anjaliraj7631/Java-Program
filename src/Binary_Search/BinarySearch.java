@@ -1,33 +1,28 @@
 package Binary_Search;
-import java.io.*;
-import java.net.URI;
-import java.awt.Desktop;
 
 public class BinarySearch {
-    public static void main(String[] args) throws Exception {
-        // File path is passed as parameter
-        File file = new File(
-                "D:\\Download\\urls.txt");
+    public static void main(String[] args) {
+        int[] arr={2,3,5,9,14,16,18};
+        int target=14;
+        System.out.println(binarySearch(arr,target));
+    }
+    static int binarySearch(int[] arr,int tar){
 
-        // Note:  Double backquote is to avoid compiler
-        // interpret words
-        // like \test as \t (ie. as a escape sequence)
-
-        // Creating an object of BufferedReader class
-        BufferedReader br = new BufferedReader(new FileReader(file));
-
-        // Declaring a string variable
-        String st;
-        // Condition holds true till
-        // there is character in a string
-        while ((st = br.readLine()) != null) {
-            // Print the string
-            System.out.println(st);
-
-            Desktop desk = Desktop.getDesktop();
-            // now we enter our URL that we want to open in our
-            // default browser
-            desk.browse(new URI(st));
+        int start=0;
+        int end=arr.length-1;
+        while (start<=end){
+            int mid=start+(end-start)/2;
+            if (tar<arr[mid]){
+                end=mid-1;
+            } else if (tar>arr[mid]) {
+                start=mid+1;
+            }
+            else {
+                return mid;
+            }
         }
+        return -1;
     }
 }
+
+

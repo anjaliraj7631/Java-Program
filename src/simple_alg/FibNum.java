@@ -12,9 +12,9 @@ public class FibNum {
         while (c<=n){
             int temp=b;
             b=b+a;
+            System.out.println(b);
             a=temp;
             c++;
         }
-        System.out.println(b);
     }
 }

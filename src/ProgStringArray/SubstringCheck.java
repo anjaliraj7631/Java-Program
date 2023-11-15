@@ -1,6 +1,6 @@
 package ProgStringArray;
 
-public class SubstringChaeck {
+public class SubstringCheck {
     public static void main(String[] args) {
         String s1="hello";
         String s2="helloWOrld";

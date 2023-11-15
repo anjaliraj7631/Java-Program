@@ -8,8 +8,7 @@ public class MatrixMutltiplication {
         for (int i = 0; i < m1.length; i++) {
             for (int j = 0; j < m1[0].length; j++) {
                 for (int k = 0; k < m2.length; k++) {
-
-
+                    
                 }
             }
         }

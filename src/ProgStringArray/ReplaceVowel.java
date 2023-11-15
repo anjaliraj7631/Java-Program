@@ -2,7 +2,7 @@ package ProgStringArray;
 
 public class ReplaceVowel {
     public static void main(String[] args) {
-        String s="helloWorld";
+        String s="hello World";
         replace(s);
     }
     static int countCon(String s){
@@ -17,10 +17,17 @@ public class ReplaceVowel {
         }
         return count;
     }
+    public static char[] toCharArrayMethod(String s){
+        char[] c=new char[s.length()];
+        for (int i = 0; i <s.length() ; i++) {
+            c[i]=s.charAt(i);
+        }
+        return c;
+    }
 
     static void replace(String s){
         int count=countCon(s);
-        char[] ch=s.toCharArray();
+        char[] ch=toCharArrayMethod(s);
         if(count>3){
             for (int i = 0; i < s.length(); i++) {
                 char c=s.charAt(i);

@@ -38,15 +38,15 @@ public class FrequencyOfEachChar {
         for (int i=0;i<c.length;i++){
             f[i]=1;
             for (int j=i+1;j<c.length;j++){
-                if(c[i]!='@' && c[j]!='@' && c[i]==c[j]){
+                if(c[i]!='@' && c[j]!='@' && c[i]==c[j] && c[i]!=' '){
                     f[i]++;
                     c[j]='@';
                 }
             }
         }
         for (int i=0;i<c.length;i++){
-            if(c[i]!='@'){
-                System.out.println(c[i]+"---"+f[i]);
+            if(c[i]!='@'  && c[i]!=' '){
+                System.out.println(c[i]+"--->"+f[i]);
             }
         }
     }

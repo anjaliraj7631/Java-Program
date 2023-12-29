@@ -1,5 +1,8 @@
 package LambdaFunction;
 
+interface Operation{
+    int operation(int a,int b);
+}
 public class Calculator {
     public static void main(String[] args) {
         Operation sum=(a,b) -> a+b;
@@ -16,6 +19,4 @@ public class Calculator {
         return op.operation(a,b);
     }
 }
-interface Operation{
-    int operation(int a,int b);
-}
+

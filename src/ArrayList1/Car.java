@@ -1,6 +1,7 @@
 package ArrayList1;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 class Car {
@@ -63,9 +64,7 @@ class Car {
                 newCarlist.add(c);
             }
         }
-        carlist.clear();
-        carlist.addAll(newCarlist);
-        for (Car c1:carlist) {
+        for (Car c1:newCarlist) {
             System.out.println(c1);
         }
     }
@@ -120,6 +119,10 @@ class CarMain{
                          break;
                 case 4:System.out.println("----------Sorting based on model-------");
                         Car.sortModel(carlist);
+//                        Collections.sort(carlist,new SortACToModel());
+//                         for (Car c: carlist) {
+//                        System.out.println(c);
+//                    }
                         System.out.println();
                         break;
                 case 5:System.out.println("---------Removing black color car------");

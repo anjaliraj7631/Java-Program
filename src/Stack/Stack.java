@@ -2,7 +2,7 @@ package Stack;
 
 import java.util.Scanner;
 
-public class Stack {
+public class Stack<C> {
     int size;
     int top;
     int[] stack;
@@ -66,7 +66,7 @@ class StackMain{
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter size");
         int size=sc.nextInt();
-        Stack s=new Stack(size);
+        Stack<Character> s=new Stack<Character>(size);
         boolean exit=false;
         while (!exit){
             System.out.println("1.Push \n2.Pop \n3.Empty \n4.Full \n5.Peek \n6.Display \n7.Exit");
